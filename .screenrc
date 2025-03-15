@@ -1,0 +1,17 @@
+# 啟用 256 色支持
+term screen-256color
+
+# 顯示狀態欄
+hardstatus alwayslastline "%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]"
+
+# 不顯示啟動訊息
+startup_message off
+
+# 滾動緩衝區大小
+defscrollback 10000
+
+# 啟用滑鼠支持
+mousetrack on
+
+# 自動分離會話
+autodetach on
