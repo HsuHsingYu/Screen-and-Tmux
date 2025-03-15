@@ -52,55 +52,7 @@
 | **調整面板大小** | `Ctrl+a :resize` | `Ctrl+b :resize-pane -D/U/L/R 行數` |
 | **顯示所有按鍵綁定** | `Ctrl+a ?` | `Ctrl+b ?` |
 
-## 配置檔案對照
 
-### Screen 配置文件 (`~/.screenrc`)
-```
-# 啟用 256 色支持
-term screen-256color
-
-# 顯示狀態欄
-hardstatus alwayslastline "%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]"
-
-# 不顯示啟動訊息
-startup_message off
-
-# 滾動緩衝區大小
-defscrollback 10000
-
-# 啟用滑鼠支持
-mousetrack on
-
-# 自動分離會話
-autodetach on
-```
-
-### Tmux 配置文件 (`~/.tmux.conf`)
-```
-# 啟用 256 色支持
-set -g default-terminal "screen-256color"
-
-# 啟用真彩色支持
-set -ga terminal-overrides ",*256col*:Tc"
-
-# 狀態欄配置
-set -g status-style "bg=black,fg=white"
-set -g status-left "#[bg=green,fg=black] #S "
-set -g status-right "#[bg=blue,fg=black] %Y-%m-%d %H:%M "
-
-# 增加歷史記錄限制
-set -g history-limit 10000
-
-# 啟用滑鼠支持
-set -g mouse on
-
-# 窗口從 1 開始計數
-set -g base-index 1
-setw -g pane-base-index 1
-
-# 設置按鍵綁定
-bind | split-window -h
-bind - split-window -v
 ```
 
 ## 基本使用流程對照
